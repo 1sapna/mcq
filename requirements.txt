@@ -1,0 +1,7 @@
+streamlit
+spacy
+pdfplumber
+pytesseract
+Pillow
+nltk
+scikit-learn

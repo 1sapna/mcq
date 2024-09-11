@@ -2,7 +2,7 @@ Streamlit
 Spacy
 pdfplumber
 pytesseract
-Pillow: 10.4.0
+Pillow
 NLTK
 scikit-learn: 1.5.2
 numpy: 1.26.4

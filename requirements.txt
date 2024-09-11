@@ -1,5 +1,5 @@
 Streamlit
-Spacy: 3.7.0
+Spacy
 pdfplumber
 pytesseract
 Pillow: 10.4.0

@@ -17,7 +17,12 @@ def ensure_spacy_model():
         spacy.load("en_core_web_sm")
     except OSError:
         st.write("Downloading spaCy model 'en_core_web_sm'...")
-        subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+        try:
+            subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+        except subprocess.CalledProcessError as e:
+            st.write("Error downloading spaCy model. Please check your internet connection and permissions.")
+            st.write(str(e))
+            st.stop()
 
 ensure_spacy_model()
 

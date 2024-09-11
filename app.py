@@ -1,4 +1,6 @@
 import spacy
+import subprocess
+import sys
 import pdfplumber
 import pytesseract
 from PIL import Image
@@ -8,6 +10,16 @@ import random
 from nltk.corpus import wordnet
 import re
 from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Function to ensure spaCy model is installed
+def ensure_spacy_model():
+    try:
+        spacy.load("en_core_web_sm")
+    except OSError:
+        st.write("Downloading spaCy model 'en_core_web_sm'...")
+        subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+
+ensure_spacy_model()
 
 # Load spaCy model
 nlp = spacy.load("en_core_web_sm")

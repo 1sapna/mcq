@@ -10,6 +10,10 @@ import random
 from nltk.corpus import wordnet
 import re
 from sklearn.feature_extraction.text import TfidfVectorizer
+import subprocess
+
+# Run the setup script
+subprocess.call(["./setup.sh"])
 
 # Function to ensure spaCy model is installed
 def ensure_spacy_model():

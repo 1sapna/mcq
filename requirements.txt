@@ -2,6 +2,9 @@ streamlit
 spacy
 pdfplumber
 pytesseract
-Pillow
+pillow
 nltk
 scikit-learn
+numpy
+scipy
+pandas
